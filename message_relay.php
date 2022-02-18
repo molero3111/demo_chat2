@@ -40,6 +40,6 @@ if(isset($chat->message) && !empty($chat->message)) {
     } else {       
         echo ' error';  
     }
-}else { echo ' oh no';}
+}else { echo ' no message';}
 
 ?>
