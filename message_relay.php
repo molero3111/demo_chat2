@@ -17,16 +17,15 @@ use Pusher\Pusher;
 //   )
 // );
 $options = array(
-    'cluster' => 'us2',
-    'useTLS' => true
-  );
-//add your channel credentials
-  $pusher = new Pusher(
-    '',
-    '',
-    '',
-    $options
-  );
+  'cluster' => 'us2',
+  'useTLS' => true
+);
+$pusher = new Pusher(
+  '0416e92d345ab6eea214',
+  '8df4677012fe7dd78b9d',
+  '1344149',
+  $options
+);
   
 $chat = json_decode(file_get_contents('php://input'));
 
@@ -41,6 +40,7 @@ if(isset($chat->message) && !empty($chat->message)) {
     } else {       
         echo ' error';  
     }
-}else { echo ' no message';}
+}
+else { echo 'no message';}
 
 ?>
